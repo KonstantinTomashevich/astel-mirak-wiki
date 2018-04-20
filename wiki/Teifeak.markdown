@@ -1,10 +1,9 @@
 ---
 layout: page
 title:  "Тэйфіак"
-date:   2018-04-16 16:40:39 +0300
 categories: wiki
 ---
-![Wandered Art by leventep from deviant art](/images/Teifeak.jpg)
+![Wanderer Art by leventep from deviant art](/images/Teifeak.jpg)
 
 <blockquote>
 Тэйфіак на развітанне махнуў рукой Хальбранду і пачаў ствараць вакол сабе нейкую магічную сферу. Потым ён узняў рукі к верху і пацягнуўся. Нечакана сфера пачала дыміцца і знікаць, разам з ён задыміўся і знік і сам Тэйфіак.
