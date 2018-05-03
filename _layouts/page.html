@@ -15,4 +15,17 @@ layout: default
     {{ content }}
   </div>
 
+  <script>
+  var elements = document.body.getElementsByTagName ("a");
+  var pagesList = [{% for page in site.pages %} "{{ page.url | absolute_url }}", {% endfor %}];
+
+  for (var elementIndex = 0; elementIndex < elements.length; elementIndex++)
+  {
+      var element = elements [elementIndex];
+      if (!pagesList.includes (element.href + ""))
+      {
+          element.style.color = "#cc2222";
+      }
+  }
+  </script>
 </article>
