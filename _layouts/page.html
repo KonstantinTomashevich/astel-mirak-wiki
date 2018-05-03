@@ -17,13 +17,23 @@ layout: default
 
   <script>
   var elements = document.body.getElementsByTagName ("a");
-  var pagesList = [{% for page in site.pages %} "{{ page.url | absolute_url }}", {% endfor %}];
+  var pagesList = [{% for page in site.pages %} "{{ page.url }}", {% endfor %}];
 
   for (var elementIndex = 0; elementIndex < elements.length; elementIndex++)
   {
+      var found = false;
       var element = elements [elementIndex];
-      alert (element.href);
-      if (!pagesList.includes (element.href + ""))
+
+      for (var pageIndex = 0; pageIndex < pagesList.length; pageIndex++)
+      {
+          if (element.href.endsWith (pagesList [pageIndex]))
+          {
+              found = true;
+              break;
+          }
+      }
+
+      if (!found)
       {
           element.style.color = "#cc2222";
       }
