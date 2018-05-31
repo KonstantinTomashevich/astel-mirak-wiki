@@ -4,24 +4,62 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
+
+  <div class="post-content">
+      <br>
+      <h3>Выпадковая старонка:</h3>
+      <hr>
+
+      <a href="">
+          <h3 align="center" id="RandomPageHeading"></h4>
+          <img align="center" id="RandomPageImage" alt="Random Page Image"></img>
+      </a>
+
+      <br>
+      <hr>
+      <br>
+
+      <h3>Усе старонкі ў алфавітным парадку:</h3>
+      <hr>
+
+      <ul class="post-list">
+          {% assign sortedPages = site.pages | sort:"title" %}
+          {%- for page in sortedPages -%}
+          {% if page.categories contains "wiki" %}
+          <h4>
+              <a class="post-link" href="{{ page.url | relative_url }}">
+                  {{ page.title | escape }}
+              </a>
+          </h4>
+          {% endif %}
+          {%- endfor -%}
+      </ul>
+  </div>
+
+  <script>
+    var pagesList = [
+        {% for page in site.pages %}
+            {% if page.categories contains "wiki" %}
+                {
+                    title: "{{ page.title }}",
+                    url: "{{ page.url }}",
+                    imagePath: "{{ page.image }}"
+                },
+            {% endif %}
+        {% endfor %}
+    ];
+
+    var randomPageIndex = Math.floor (Math.random () * pagesList.length);
+    var randomPageHeading = document.getElementById ("RandomPageHeading");
+    var randomPageImage = document.getElementById ("RandomPageImage");
+
+    randomPageHeading.innerText = pagesList [randomPageIndex].title;
+    randomPageImage.src = pagesList [randomPageIndex].imagePath;
+    randomPageHeading.parentElement.href = pagesList [randomPageIndex].url;
+  </script>
 
   {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-        {% assign sortedPages = site.pages | sort:"title" %}
-        {%- for page in sortedPages -%}
-            {% if page.categories contains "wiki" %}
-                <h3>
-                  <a class="post-link" href="{{ page.url | relative_url }}">
-                    {{ page.title | escape }}
-                  </a>
-                </h3>
-            {% endif %}
-        {%- endfor -%}
-    </ul>
-  {%- endif -%}
 
 </div>

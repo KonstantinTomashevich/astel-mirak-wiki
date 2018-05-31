@@ -2,6 +2,7 @@
 layout: page
 title:  "Вецер Тысячы Зім"
 categories: wiki
+image: /images/WindOf1000Winters.jpg
 ---
 ![NGC 6960: туманность Ведьмина метла. Авторы и права: Мартин Паф](/images/WindOf1000Winters.jpg)
 

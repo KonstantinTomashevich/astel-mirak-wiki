@@ -2,6 +2,7 @@
 layout: page
 title:  "Сістэмы вымярэння"
 categories: wiki
+image: /images/MetricSystemsHourglass.jpg
 ---
 ![Random hourglass image](/images/MetricSystemsHourglass.jpg)
 

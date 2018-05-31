@@ -2,6 +2,7 @@
 layout: page
 title:  "Тэйфіак"
 categories: wiki
+image: /images/Teifeak.jpg
 ---
 ![Wanderer Art by leventep from deviant art](/images/Teifeak.jpg)
 

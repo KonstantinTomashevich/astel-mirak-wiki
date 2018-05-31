@@ -2,6 +2,7 @@
 layout: page
 title:  "Чыстая магія"
 categories: wiki
+image: /images/PureMagic.jpg
 ---
 ![Higgs boson model](/images/PureMagic.jpg)
 
