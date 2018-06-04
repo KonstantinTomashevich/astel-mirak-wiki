@@ -26,15 +26,15 @@ layout: default
       <hr>
       <br>
 
-      <ul class="post-list">
+      <ul>
           {% assign sortedPages = site.pages | sort:"title" %}
           {%- for page in sortedPages -%}
           {% if page.categories contains "wiki" %}
-          <h4>
+          <li>
               <a class="post-link" href="{{ page.url | relative_url }}">
                   {{ page.title | escape }}
               </a>
-          </h4>
+          </li>
           {% endif %}
           {%- endfor -%}
       </ul>
